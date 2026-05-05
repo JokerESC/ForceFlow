@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Model checkpoints & datasets
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.h5
+*.hdf5
+*.zarr
+checkpoints/
+outputs/
+logs/
+wandb/
+
+# Data & media
+*.mp4
+*.avi
+*.bag
+recordings/
+
+# Environment
+.env
+.venv/
+env_local/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code session files
+.claude/
+
+# Normalizer params (machine-specific)
+normalizer_params*.json

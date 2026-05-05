@@ -1,0 +1,54 @@
+# xArm Diffusion Policy training config
+
+# Runtime
+devices: [0]         # list of CUDA device ids
+seed: 0              # random seed
+
+# Model
+task: <task>
+model: dit           # dit (others not implemented)
+horizon: 64          # model/action horizon (training always uses this)
+Ta: 32               # inference execution steps (only used in inference, NOT in training)
+To: 2                # obs history length
+T_force: 10         # force history length
+
+
+# Wandb (optional, offline by default)
+wandb:
+  enable: true
+  offline: true
+  project: ${task}
+  name: ${model}_horizon_${horizon}
+  log_model: false
+
+
+
+ckpt: last
+
+# path (set these to your local paths)
+work_dir: checkpoints/${task}/${model}_horizon_${horizon}
+dataset_path: data/${task}.zarr
+normalizer_path: data/${task}.zarr/${task}_normalizer.json
+# ckpt_path: checkpoints/${task}/${model}_horizon_${horizon}/epoch=22-step=30000.ckpt   # optional: resume checkpoint path
+inference_ckpt_path: checkpoints/${task}/${model}_horizon_${horizon}/${ckpt}.ckpt
+# train
+max_steps: 100000
+log_every_n_steps: 50                 # lightning logging interval
+checkpoint_every_n_steps: 5000        # save ckpt every N training steps
+save_top_k: -1                        # keep all checkpoints; set>0 to keep top-k by monitor
+save_last: true                       # additionally save 'last.ckpt'
+
+
+
+# Temporal settings
+batch_size: 128
+num_workers: 8
+precision: bf16-mixed   # options: 32-true, 16-mixed, bf16-mixed, etc.
+accumulate_grad_batches: 1
+use_persistent_workers: true
+shuffle: true
+image_size: 224
+
+
+
+

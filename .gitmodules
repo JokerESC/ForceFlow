@@ -1,0 +1,4 @@
+[submodule "CleanDiffuser"]
+	path = CleanDiffuser
+	url = https://github.com/JokerESC/CleanDiffuser.git
+	branch = lightning

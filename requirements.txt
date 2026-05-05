@@ -1,0 +1,23 @@
+# Core deep learning
+torch==2.11.0
+torchvision==0.26.0
+pytorch-lightning==2.5.5
+
+# Data
+zarr==2.16.1
+numpy==1.26.4
+opencv-python==4.11.0.86
+
+# Robot kinematics
+pytransform3d==3.14.3
+
+# Utilities
+termcolor==3.1.0
+omegaconf==2.3.0
+pyyaml==6.0.3
+
+# Logging (optional)
+wandb==0.24.0
+
+# Note: CleanDiffuser is included as a git submodule — no pip install needed.
+# Initialize it with: git submodule update --init --recursive
