@@ -2,6 +2,8 @@
 
 [[Project Page](https://jokeresc.github.io/ForceFlow-page)]
 
+![ForceFlow](assets/motivation-1.png)
+
 ForceFlow is a force-aware reactive framework for contact-rich robot manipulation. Existing vision-based policies fail in contact-intensive tasks because visual feedback cannot capture high-frequency contact dynamics. ForceFlow addresses this with an asymmetric multimodal fusion strategy: force/torque history is injected as a global regulation signal to prevent it from being overshadowed by high-dimensional visual features, while a hybrid action space jointly predicts motion commands and expected contact forces to enable proactive compliance. ForceFlow achieves 81.67% average success rate across six real-world tasks, outperforming the state-of-the-art force-aware baseline by 37%.
 
 ## Installation
