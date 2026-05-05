@@ -53,7 +53,7 @@ This validates the dataset structure, fixes `episode_ends`, and saves a `<task>_
 ### 4. Train
 
 ```bash
-python train.py --config configs/xarm.yaml
+python -m pipeline.train --config configs/xarm.yaml
 ```
 
 Checkpoints are saved to `checkpoints/<task>/`. Training uses W&B logging by default (set `wandb.enable: false` to disable).
@@ -61,7 +61,7 @@ Checkpoints are saved to `checkpoints/<task>/`. Training uses W&B logging by def
 ### 5. Run Inference
 
 ```bash
-python inference.py --config configs/xarm.yaml
+python -m pipeline.inference --config configs/xarm.yaml
 ```
 
 - Press **Enter** to start inference after positioning the robot
