@@ -1,6 +1,6 @@
 # ForceFlow: Learning to Feel and Act via Contact-Driven Flow Matching
 
-[[Project Page](https://jokeresc.github.io/ForceFlow-page)]
+[[Project Page](https://jokeresc.github.io/ForceFlow-page)] | [[Dataset](https://huggingface.co/datasets/JokerESC/ForceFlow)]
 
 ![ForceFlow](assets/motivation-1.png)
 
